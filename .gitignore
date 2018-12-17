@@ -1,0 +1,13 @@
+worksheets/*.aux
+worksheets/*.log
+worksheets/*.fls
+worksheets/*.out
+worksheets/*.synctex.gz
+worksheets/*.fdb_latexmk
+.DS_Store
+worksheets/*.pdf
+projects/*.aux
+projects/*.log
+projects/*.out
+projects/*.synctex.gz
+projects/*.pdf

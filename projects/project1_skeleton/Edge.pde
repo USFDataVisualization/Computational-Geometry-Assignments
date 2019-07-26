@@ -5,12 +5,11 @@ class Edge{
    Point p0,p1;
       
    Edge(Point _p0, Point _p1 ){
-     p0 = _p0; p1 = _p1;
+     // TODO: Use code from Project 0
    }
    
    void draw(){
-     line( p0.p.x, p0.p.y, 
-           p1.p.x, p1.p.y );
+     // TODO: Use code from Project 0
    }
    
    

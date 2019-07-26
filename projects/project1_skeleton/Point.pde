@@ -5,7 +5,7 @@ class Point {
    public PVector p;
 
    public Point( float x, float y ){
-     p = new PVector(x,y);
+     // TODO: Use code from Project 0
    }
 
    public Point(PVector _p0 ){
@@ -13,7 +13,7 @@ class Point {
    }
    
    public void draw(){
-     ellipse( p.x,p.y, 10,10);
+     // TODO: Use code from Project 0
    }
    
    float getX(){ return p.x; }

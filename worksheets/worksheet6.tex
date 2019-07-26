@@ -11,61 +11,54 @@
 
 \maketitle
 
+\worksheetGroundRules
 
-\vspace{5pt}
-\section{Ground Rules}
-
-\myparagraph{This assignment is OPTIONAL and UNGRADED.}
 
 \vspace{5pt}
 \section{Assignment}
 
 \begin{itemize}
-\item For the following point set, find perform spatial subdivision using a: grid; quadtree; and kd-tree. Show the algorithm using the following pages. Be sure to show all of the steps and the order of steps for the algorithm (show both the division and resulting tree).
 
+
+\item For the following point set, find the convex hull using:
+
+\begin{enumerate}
+	\item The QuickHull algorithm. 
+	\item The Graham's algorithm. 
+\end{enumerate}
+
+\vspace{-10pt}
 \begin{center}
-\includegraphics[width=8cm]{../images/spatial_subd.pdf}
+\includegraphics[width=8cm]{../images/chull.pdf}
 \end{center}
 
+\vspace{-10pt}
+\item Use the following page to show the steps of the algorithm. Print off as many copies as you need, though you may not need all copies of the point set. 
 
-\item For each algorithm, determine some example point sets which produce best and worst case spatial subdivision and query time.
+\item Use each steps to determine the best/average/worst case big-O performance for a single iteration. 
+\item Combine that information to determine the best/average/worst case big-O for the entire computation.
+
 
 
 \end{itemize}
 
 
-%\section{Submission}
+\worksheetSubmission
 
-%\myparagraph{Upload your answers and associated work to canvas as a single scanned, types, or photographed PDF document. Be sure that your submission is legible.}
+
 
 
 \newpage
 
-\begin{center}
 \begin{tabular}{|c|c|}
 \hline
- & \\
-\hspace{10pt}\includegraphics[width=7.5cm]{../images/spatial_subd.pdf}
-\hspace{10pt} & \hspace{175pt} \\
- & \\
+\hspace{20pt}\includegraphics[width=0.375\linewidth]{../images/chull.pdf}\hspace{20pt} & \hspace{20pt}\includegraphics[width=0.375\linewidth]{../images/chull.pdf}\hspace{20pt} \\
 \hline
- & \\
-\hspace{10pt}\includegraphics[width=7.5cm]{../images/spatial_subd.pdf}
-\hspace{10pt} & \hspace{10pt} \\
- & \\
+\hspace{20pt}\includegraphics[width=0.375\linewidth]{../images/chull.pdf}\hspace{20pt} & \hspace{20pt}\includegraphics[width=0.375\linewidth]{../images/chull.pdf}\hspace{20pt} \\
 \hline
- & \\
-\hspace{10pt}\includegraphics[width=7.5cm]{../images/spatial_subd.pdf}
-\hspace{10pt} & \hspace{10pt} \\
- & \\
-\hline
- & \\
-\hspace{10pt}\includegraphics[width=7.5cm]{../images/spatial_subd.pdf}
-\hspace{10pt} & \hspace{10pt} \\
- & \\
+\hspace{20pt}\includegraphics[width=0.375\linewidth]{../images/chull.pdf}\hspace{20pt} & \hspace{20pt}\includegraphics[width=0.375\linewidth]{../images/chull.pdf}\hspace{20pt} \\
 \hline
 \end{tabular}
-\end{center}
 
 
 \end{document}

@@ -13,27 +13,35 @@
 
 \worksheetGroundRules
 
+\worksheetSubmission
 
-\vspace{5pt}
-\section{Assignment}
+\vspace{3pt}
+\section{Assignment} 
+
+
 
 \begin{enumerate}
 
-\item Determine the orientation (clockwise or counterclockwise) of the following triangles.
+\item For each of the following triangles, where $\{p_1,p_2,p_3\}$:
 
+\vspace{-10pt}
+$$T_1=\{\{2,3\},\{5,6\},\{3,5\}\}$$
+$$T_2=\{\{3,2\},\{1,6\},\{4,4\}\}$$
+$$T_3=\{\{1,3\},\{5,9\},\{3,6\}\}$$
 
-\begin{itemize}
-\item $\{\{2,3\},\{5,6\},\{3,5\}\}$
-\item $\{\{3,2\},\{1,6\},\{4,4\}\}$
-\item $\{\{1,3\},\{5,9\},\{3,6\}\}$
-\item $\{\{1,4\},\{5,6\},\{9,8\}\}$
-\end{itemize}
+%\begin{itemize}
+%\item $T_1=\{\{2,3\},\{5,6\},\{3,5\}\}$
+%\item $T_2=\{\{3,2\},\{1,6\},\{4,4\}\}$
+%\item $T_3=\{\{1,3\},\{5,9\},\{3,6\}\}$
+%\item $\{\{1,4\},\{5,6\},\{9,8\}\}$
+%\end{itemize}
 
+\begin{enumerate}
+\item Draw the triangles
 
-\item Calculate the angle between the following 2 vectors using the:
+\item Calculate the vectors: $\overrightarrow{A} = \overrightarrow{p_1p_2}; \overrightarrow{B} = \overrightarrow{p_1p_3}$
 
-$$A = <8,2>; B = <6,5>$$
-
+\item Calculate the angle between the following 2 vectors, $\angle\overrightarrow{A}\overrightarrow{B}$ using the:
 
 \begin{itemize}
 \item difference between 2 angles approach
@@ -41,27 +49,42 @@ $$A = <8,2>; B = <6,5>$$
 \item cross product approach
 \end{itemize}
 
+\item Determine the orientation (clockwise or counterclockwise) of the following triangles.
 
-\item Perform the following linear interpolations.
+\end{enumerate}
+
+
+
+\item Perform the following linear interpolations:
+
+\vspace{-10pt}
+%\begin{itemize}
+%\item $A=2; B=5; \alpha=0.4$
+%\item $A=\{1,6\}; B=\{4,4\}; \alpha=0.7$
+%\item $A=\{3,6\}; B=\{5,9\}; \alpha=0.2$
+%\end{itemize}
+$$A=2; B=5; \alpha=0.4$$
+$$A=\{1,6\}; B=\{4,4\}; \alpha=0.7$$
+$$A=\{5,6\}; B=\{5,9\}; \alpha=0.2$$
+
+
+
+\item Answer the following questions about complexity:
 
 \begin{itemize}
-\item $A=\{2,3\}; B=\{5,6\}; \alpha=0.4$
-\item $A=\{1,6\}; B=\{4,4\}; \alpha=0.7$
-\item $A=\{3,6\}; B=\{5,9\}; \alpha=0.2$
+	\item Does $2^{n+1}=O(2^n)$? If not, what does it equal?
+	\item Does $2^{2n}=O(2^n)$? If not, what does it equal?
+	\item Generally speaking, what is the complexity of an algorithm that runs a single loop through $n$ data?
+	\item Generally speaking, what is the complexity of an algorithm with nested loops, each running through $n$ data?
+	\item Generally speaking, what is the complexity of tree operations (insert, remove, search) on a binary search tree? On a self-balanced binary tree?
 \end{itemize}
 
-
-\item Does $2^{n+1}=O(2^n)$? If not, what does it equal?
-
-\item Does $2^{2n}=O(2^n)$? If not, what does it equal?
-
-\item Prove by mathematical induction that the following formula, $3^2+3^3+...3^n=9\left( \frac{3^{n-1}-1}{2} \right)$, holds for $\forall \geq 2$.
+%\item Prove by mathematical induction that the following formula, $3^2+3^3+...3^n=9\left( \frac{3^{n-1}-1}{2} \right)$, holds for $\forall \geq 2$.
 
 
 \end{enumerate}
 
 
-\worksheetSubmission
 
 
 \end{document}

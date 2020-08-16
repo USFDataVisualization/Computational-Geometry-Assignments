@@ -16,6 +16,7 @@
 \usepackage{natbib}
 \usepackage{xstring}
 \usepackage[utf8]{inputenc}
+\usepackage[normalem]{ulem}
 
 
 \usepackage{moreverb,url}
@@ -61,7 +62,7 @@
 \textwidth 7.0in
 \oddsidemargin -0.25in
 \evensidemargin 0in
-\footskip 10 pt
+\footskip 20 pt
 
 \definecolor{linkColor}{rgb}{0.3,0,0.3}
 
@@ -72,6 +73,7 @@
                                    {\normalfont\bfseries}%
 }
 
+\renewcommand{\section}[1]{\vspace{6pt}\noindent\textbf{#1}\vspace{0pt}}
 
 \renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
                                    {-3pt}%
@@ -211,22 +213,24 @@
 
 \makeatletter
 \renewcommand\@maketitle{%
-\hfill
-\begin{minipage}{0.95\textwidth}
+%\hfill
+\noindent
+\begin{minipage}{\textwidth}
 \centering
 \vskip 2em
 \let\footnote\thanks 
-{\LARGE COT 4521-001: Introduction to Computational Geometry
-(Fall 2019) \par }
-\vskip 1.5em
+%{\LARGE COT 4521-001: Introduction to Computational Geometry
+%(Fall 2020) \par }
+{\LARGE COT 4521: Intro.\ to Computational Geometry (Fall 2020) \par }
+\vskip 0.8em
 {\Large \@title \par}
 \end{minipage}
-\vskip 1em \par
+\vskip 0.7em \par
 }
 \makeatother
 
 
-\newcommand{\myparagraph}[1]{\vspace{5pt}\noindent\begin{tabular}{@{}p{0.3in}@{}p{6.7in}@{}} & #1\end{tabular}}
+\newcommand{\myparagraph}[1]{\vspace{3pt}\noindent\begin{tabular}{@{}p{0.3in}@{}p{6.7in}@{}} & #1\end{tabular}}
 
 
 \newcommand{\submission}[1]{
@@ -266,7 +270,7 @@
 \vspace{5pt}
 \section{Ground Rules}
 
-\myparagraph{This assignment is intended to be done alone. You may ask others for high-level help. However, the answer must be yours. For all questions we expect you to show yours work!}
+\myparagraph{This assignment is intended to be solved within your group. However, you must submit your own answers. For all questions we expect you to show yours work!}
 }
 
 

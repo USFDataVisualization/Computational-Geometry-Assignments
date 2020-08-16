@@ -11,4 +11,14 @@ class Edge{
    void draw(){
      // TODO: Fill in this function
    }
+   
+   float length(){
+     // TODO: Fill in this function
+     return 0;
+   }
+   
+   void printInfo(){
+     println("Edge ===============");
+     println("    Length: " + length() + " px" );
+   }   
 }

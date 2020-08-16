@@ -24,5 +24,24 @@ class Triangle {
      return false;
    }
    
+   // returns the area (in pixels) of the triangle
+   float area(){
+     // TODO: Fill in this function
+     return 0; 
+   }
+   
+   // returns a PVector where x,y,z are the internal angles of the triangle (in degrees)
+   PVector angles(){
+     // TODO: Fill in this function
+     return new PVector();
+   }
+   
+   void printInfo(){
+     println("Triangle ===============");
+     println("    Area: " + area() + " px" );
+     println("    CW: " + cw() );
+     println("    CCW: " + ccw() );
+     println("    Internal Angles: " + angles() + " degrees" );
+   }
    
 }

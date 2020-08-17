@@ -84,6 +84,7 @@ void draw(){
   textRHC( "Counterclockwise: " + (poly.ccw()?"True":"False"), 550, 60 );
   textRHC( "Closed Boundary: " + (poly.isClosed()?"True":"False"), 550, 40 );
   textRHC( "Simple Boundary: " + (poly.isSimple()?"True":"False"), 550, 20 );
+  textRHC( "Area: " + poly.area() + " px", 550, 100 );
   
   for( int i = 0; i < points.size(); i++ ){
     textRHC( i+1, points.get(i).p.x+5, points.get(i).p.y+15 );

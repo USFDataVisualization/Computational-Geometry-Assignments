@@ -11,17 +11,14 @@
 
 \maketitle
 
-\section{Objectives}
-
-\myparagraph{In this assignment you will implement some of the basic polygon functionality.}
-
-
 
 \projectGroundRules
 
+\projectSubmission
 
-\vspace{5pt}
-\section{Assignment Instructions}
+\assignmentInstructions
+
+\myparagraph{In this assignment you will implement some of the basic polygon functionality.}
 
 \begin{itemize}
 
@@ -29,16 +26,17 @@
 
 \begin{itemize}
 
-   \item \texttt{boolean isSimple( )} --- This function checks to see that the boundary of the polygon is simple.
+   \item \texttt{boolean Polygon::isSimple( )} --- This function checks to see that the boundary of the polygon is simple.
    
-   \item \texttt{boolean pointInPolygon( Point p )} --- Returns true if the point p is inside of the polygon.
+   \item \texttt{boolean Polygon::pointInPolygon( Point p )} --- Returns true if the point p is inside of the polygon.
    
-   \item \texttt{ArrayList<Edge> getDiagonals( )} --- Returns all of the valid diagonals for the polygon.
+   \item \texttt{ArrayList<Edge> Polygon::getDiagonals( )} --- Returns all of the valid diagonals for the polygon.
    
-   \item \texttt{boolean ccw( )} --- Returns true if the polygon is oriented counterclockwise.
+   \item \texttt{boolean Polygon::ccw( )} --- Returns true if the polygon is oriented counterclockwise.
    
-   \item \texttt{boolean cw( )} --- Returns true if the polygon is oriented clockwise.
+   \item \texttt{boolean Polygon::cw( )} --- Returns true if the polygon is oriented clockwise.
          
+   \item \texttt{float Polygon::area( )} --- Returns the area, in pixel, of the polygon.
    
 \end{itemize}
 
@@ -46,8 +44,6 @@
 
 \end{itemize}
 
-
-\projectSubmission
 
 
 

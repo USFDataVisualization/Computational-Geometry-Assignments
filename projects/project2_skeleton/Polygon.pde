@@ -51,6 +51,11 @@ class Polygon {
      
      return false;
    }
+   
+   float area(){
+     // TODO: Calculate and return the area of the polygon
+     return 0;  
+   }
       
    
    

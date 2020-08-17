@@ -1,12 +1,12 @@
 
 import java.util.*;
 
-ArrayList<Point>    points        = new ArrayList<Point>();
-ArrayList<Edge>     edges         = new ArrayList<Edge>();
-ArrayList<Triangle> triangles     = new ArrayList<Triangle>();
+ArrayList<Point> points = new ArrayList<Point>();
+ArrayList<Edge>  edges  = new ArrayList<Edge>();
 
 ArrayList<Point> intersectionsNaive = new ArrayList<Point>();
 ArrayList<Point> intersectionsOpt   = new ArrayList<Point>();
+ArrayList<Point> intersectionsAABB  = new ArrayList<Point>();
 
 boolean saveImage = false;
 
@@ -15,7 +15,7 @@ int edgeCount = 2;
 void setup(){
   size(800,800,P3D);
   frameRate(30);
-  makeRandomSegments( edgeCount );
+  makeRandomSegments( edgeCount, 250 );
   makeIntersections( );
 }
 
@@ -23,19 +23,7 @@ void setup(){
 void makeIntersections( ){
   NaiveLineSegmentSetIntersection( edges, intersectionsNaive );
   OptimizedLineSegmentSetIntersection( edges, intersectionsOpt );
-}
-
-void makeRandomSegments( int numOfEdges ){
-  points.clear();
-  edges.clear();
-  intersectionsNaive.clear();
-  intersectionsOpt.clear();
-  
-  for( int i = 0; i < numOfEdges; i++ ){
-    points.add( new Point( random(100,700), random(100,700) ) );
-    points.add( new Point( random(100,700), random(100,700) ) );
-    edges.add( new Edge( points.get(i*2), points.get(i*2+1) ) );
-  }
+  OptimizedLineSegmentSetIntersectionAABB( edges, intersectionsAABB );
 }
 
 
@@ -53,21 +41,10 @@ void draw(){
     p.draw();
   }
   
-
-  
   noFill();
   stroke(100);
   for( Edge e : edges ){
     e.draw();
-  }
-  
-  noStroke();
-  for( Triangle t : triangles ){
-    if( t.ccw() ) 
-      fill( 200, 100, 100 );
-    else
-      fill( 100, 200, 100 ); 
-    t.draw();
   }
   
   fill(0,255,0);
@@ -78,6 +55,12 @@ void draw(){
 
   fill(0,0,255);
   stroke(0,0,255);
+  for( Point p : intersectionsOpt ){
+    p.draw();
+  }  
+  
+  fill(0,255,255);
+  stroke(0,255,255);
   for( Point p : intersectionsOpt ){
     p.draw();
   }  
@@ -106,8 +89,8 @@ void draw(){
 
 void keyPressed(){
   if( key == 's' ) saveImage = true;
-  if( key == '+' ){ edgeCount++; makeRandomSegments(edgeCount); makeIntersections( ); }
-  if( key == '-' ){ edgeCount = max(2,edgeCount-1); makeRandomSegments(edgeCount); makeIntersections( ); }
+  if( key == '+' ){ edgeCount++; makeRandomSegments(edgeCount, 250); makeIntersections( ); }
+  if( key == '-' ){ edgeCount = max(2,edgeCount-1); makeRandomSegments(edgeCount, 250); makeIntersections( ); }
   if( key == 'p' ){ performanceTest( ); }
   if( key == 'c' ){ compareOutput(); }
 }
@@ -127,7 +110,7 @@ void textRHC( String s, float x, float y ){
 }
 
 void mousePressed(){
-  makeRandomSegments(edgeCount);
+  makeRandomSegments(edgeCount, 250);
   makeIntersections( );
 }
 

@@ -28,5 +28,11 @@ class Triangle {
      return z < 0;
    }
    
+   float area(){
+     PVector v1 = PVector.sub( p1.p, p0.p );
+     PVector v2 = PVector.sub( p2.p, p0.p );
+     float z = v1.cross(v2).z;
+     return (z/2);     
+   }   
    
 }

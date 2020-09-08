@@ -3,15 +3,22 @@
 class Edge{
   
    Point p0,p1;
-      
+   AABB aabb;
+   
    Edge(Point _p0, Point _p1 ){
      p0 = _p0;
      p1 = _p1;
+     // TODO: Initialize AABB
+     // aabb = new AABB( ... );
    }
    
    void draw(){
      line( p0.p.x, p0.p.y, 
            p1.p.x, p1.p.y );
+   }
+   
+   AABB getAABB(){
+     return aabb;
    }
    
    boolean intersectionTest( Edge other ){

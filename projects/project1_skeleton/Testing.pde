@@ -91,7 +91,7 @@ void compareOutput( ){
       
       for( int i = 0; i < intersectionsNaive.size(); i++ ){
         float dOpt = intersectionsNaive.get(i).distance( intersectionsOpt.get(i) );
-        float dAABB = intersectionsNaive.get(i).distance( intersectionsOpt.get(i) );
+        float dAABB = intersectionsNaive.get(i).distance( intersectionsAABB.get(i) );
         if( dOpt > 0.01f ){ 
           println( "  ERROR: Naive/Optimized Point Sets Don't Match!" );
           return;

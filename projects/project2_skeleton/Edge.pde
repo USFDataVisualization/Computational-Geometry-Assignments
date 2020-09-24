@@ -52,28 +52,5 @@ class Edge{
      
     return true;  
   }
-      
-  Point intersectionPoint( Edge other ){
-    PVector P0 = p0.p;
-    PVector P1 = other.p0.p;
-    PVector D  = PVector.sub( p1.p, p0.p );
-    PVector Q  = PVector.sub( other.p1.p, other.p0.p );
-    PVector R  = PVector.sub( P1, P0 );
-     
-    float u = R.cross(D).z / D.cross(Q).z;
-    if( u < 0 || u > 1 ) return null;
-     
-    float t = 0;
-    if( abs(D.x) > abs(D.y) )
-      t = (R.x + Q.x*u) / D.x;
-    else
-      t = (R.y + Q.y*u) / D.y;
-
-    if( t < 0 || t > 1 ) return null;
-     
-    PVector P = PVector.add( P1, PVector.mult( Q, u ) );
-     
-    return new Point( P );     
-  }
   
 }
